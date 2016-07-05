@@ -1,0 +1,14 @@
+<routes>
+	<vType id="car" accel="2.5" decel="6.0" sigma="0.5" length="4" minGap="0" maxSpeed="100" color="137,164,204" probability="1" >
+	</vType>
+
+	<vType id="bike" length="2.5" minGap="0" guiShape="bicycle" maxSpeed="20" probability="1" vClass="bicycle">
+	</vType>
+
+    <route id="right" edges="1fi 1si 3o 3fo"/>
+    <!-- <route id="right" edges="1si 3o 3fo"/> -->
+    <flow id="platoon" route="right" begin="0" period="3" number="1" type="car" />
+
+    <route id="b_right" edges="1_si 2_o"/>
+	<flow id="bikes" route="b_right" begin="0" period="3" number="1" type="bike"/>
+</routes>

@@ -1,0 +1,86 @@
+version 2
+run config-0-20160623-15:33:50-10016
+attr caccC1 0.5
+attr caccOmegaN 0.2
+attr caccXi 1
+attr configname config
+attr controller 0
+attr datetime 20160623-15:33:50
+attr experiment config
+attr headway 0.3
+attr inifile omnetpp.ini
+attr iterationvars "$controller=0, $sController=\"ACC\", $headway=0.3, $caccC1=0.5, $caccXi=1, $caccOmegaN=0.2, $ploegH=0.5, $ploegKp=0.2, $ploegKd=0.7, $priority=2, $packetSize=200"
+attr iterationvars2 "$controller=0, $sController=\"ACC\", $headway=0.3, $caccC1=0.5, $caccXi=1, $caccOmegaN=0.2, $ploegH=0.5, $ploegKp=0.2, $ploegKd=0.7, $priority=2, $packetSize=200, $repetition=0"
+attr measurement "$controller=0, $sController=\"ACC\", $headway=0.3, $caccC1=0.5, $caccXi=1, $caccOmegaN=0.2, $ploegH=0.5, $ploegKp=0.2, $ploegKd=0.7, $priority=2, $packetSize=200"
+attr network scenario
+attr packetSize 200
+attr ploegH 0.5
+attr ploegKd 0.7
+attr ploegKp 0.2
+attr priority 2
+attr processid 10016
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr sController "\"ACC\""
+attr seedset 0
+
+scalar . 	caccC1 	0.5
+scalar . 	caccOmegaN 	0.2
+scalar . 	caccXi 	1
+scalar . 	controller 	0
+scalar . 	headway 	0.3
+scalar . 	packetSize 	200
+scalar . 	ploegH 	0.5
+scalar . 	ploegKd 	0.7
+scalar . 	ploegKp 	0.2
+scalar . 	priority 	2
+scalar scenario.node[1].nic.phy80211p 	busyTime 	0.010860783012608
+scalar scenario.node[1].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[1].nic.mac1609_4 	ReceivedBroadcasts 	998
+scalar scenario.node[1].nic.mac1609_4 	SentPackets 	297
+scalar scenario.node[1].nic.mac1609_4 	SNIRLostPackets 	0
+scalar scenario.node[1].nic.mac1609_4 	RXTXLostPackets 	0
+scalar scenario.node[1].nic.mac1609_4 	TotalLostPackets 	0
+scalar scenario.node[1].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[1].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[1].nic.mac1609_4 	TimesIntoBackoff 	297
+scalar scenario.node[1].nic.mac1609_4 	SlotsBackoff 	1057
+scalar scenario.node[1].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[1].nic.mac1609_4 	totalBusyTime 	0.424529
+scalar scenario.node[1].mobility 	startTime 	0.01
+scalar scenario.node[1].mobility 	totalTime 	30.13
+scalar scenario.node[1].mobility 	stopTime 	30.15
+scalar scenario.node[1].mobility 	minSpeed 	0.00029411764705882
+scalar scenario.node[1].mobility 	maxSpeed 	22.553139857305
+scalar scenario.node[1].mobility 	totalDistance 	392.06354662584
+scalar scenario.node[1].mobility 	totalCO2Emission 	152.90355523126
+scalar scenario.node[2].nic.phy80211p 	busyTime 	0.011844460328806
+scalar scenario.node[2].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[2].nic.mac1609_4 	ReceivedBroadcasts 	1012
+scalar scenario.node[2].nic.mac1609_4 	SentPackets 	270
+scalar scenario.node[2].nic.mac1609_4 	SNIRLostPackets 	0
+scalar scenario.node[2].nic.mac1609_4 	RXTXLostPackets 	0
+scalar scenario.node[2].nic.mac1609_4 	TotalLostPackets 	0
+scalar scenario.node[2].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[2].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[2].nic.mac1609_4 	TimesIntoBackoff 	270
+scalar scenario.node[2].nic.mac1609_4 	SlotsBackoff 	974
+scalar scenario.node[2].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[2].nic.mac1609_4 	totalBusyTime 	0.420238
+scalar scenario.node[2].mobility 	startTime 	3.01
+scalar scenario.node[2].mobility 	totalTime 	27.97
+scalar scenario.node[2].mobility 	stopTime 	30.99
+scalar scenario.node[2].mobility 	minSpeed 	0
+scalar scenario.node[2].mobility 	maxSpeed 	22.658878094615
+scalar scenario.node[2].mobility 	totalDistance 	392.08868740318
+scalar scenario.node[2].mobility 	totalCO2Emission 	151.53983613765
+scalar scenario.node[0].nic.phy80211p 	busyTime 	0.0088768558951964
+scalar scenario.node[0].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[0].nic.mac1609_4 	ReceivedBroadcasts 	1551
+scalar scenario.node[0].nic.mac1609_4 	SentPackets 	566
+scalar scenario.node[0].nic.mac1609_4 	SNIRLostPackets 	0
+scalar scenario.node[0].nic.mac1609_4 	RXTXLostPackets 	0
+scalar scenario.node[0].nic.mac1609_4 	TotalLostPackets 	0
+scalar scen

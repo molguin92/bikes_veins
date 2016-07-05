@@ -1,0 +1,5 @@
+
+
+network scenario extends Cross
+{
+}

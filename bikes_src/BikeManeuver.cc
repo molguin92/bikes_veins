@@ -1,9 +1,10 @@
-#include "veins/modules/application/bikes_veins/BikeManeuver.h"
+#include "veins/modules/application/bikes/BikeManeuver.h"
 
 Define_Module(BikeManeuver);
 
 void BikeManeuver::initialize(int stage)
 {
+	std::cout << "initializing...\n";
 	BaseWaveApplLayer::initialize(stage);
 
 	switch (stage)
@@ -40,14 +41,14 @@ void BikeManeuver::initialize(int stage)
 			std::cerr << "\n";
 			exit(69);
 		}
-		break;
-
 		prepareManeuver();
+		break;
 	}
 }
 
 void BikeManeuver::prepareManeuver()
 {
+	std::cout << "preparing...\n";
 	if (myRole == CAR)
 	{
 		SimTime beginTime = SimTime(uniform(0.001, 1.0));
@@ -55,18 +56,14 @@ void BikeManeuver::prepareManeuver()
 		ping_interval = SimTime(0.1);
 		scheduleAt(simTime() + ping_interval + beginTime, selfbeacon);
 	}
+	else if (myRole == BIKE)
+		scheduleAt(simTime() + SimTime(0.1), new cMessage);
 }
 
 void BikeManeuver::finish()
 {
 
-	if (turnmsg)
-	{
-		cancelAndDelete(turnmsg);
-		turnmsg = 0;
-	}
-
-	if(selfbeacon)
+	if (selfbeacon)
 	{
 		cancelAndDelete(selfbeacon);
 		selfbeacon = 0;
@@ -81,6 +78,8 @@ void BikeManeuver::handleSelfMsg(cMessage * msg)
 
 	if (msg == selfbeacon)
 		handleSelfBeacon(msg);
+	else
+		handleTurnWarning();
 }
 
 void BikeManeuver::handleSelfBeacon(cMessage *msg)
@@ -91,6 +90,7 @@ void BikeManeuver::handleSelfBeacon(cMessage *msg)
 	case FSM_Exit(CAR_INIT):
 	{
 		FSM_Goto(carFSM, CAR_IDLE);
+		scheduleAt(simTime() + ping_interval, selfbeacon);
 		break;
 	}
 	case FSM_Exit(CAR_IDLE):
@@ -146,15 +146,21 @@ void BikeManeuver::handleSelfBeacon(cMessage *msg)
 void BikeManeuver::handleTurnWarning()
 {
 	//check current status
+	std::cout << "Handle turn warning or init msg...\n";
 	FSM_Switch(bikeFSM)
 	{
+	case FSM_Exit(BS_INIT):
+		FSM_Goto(bikeFSM, BS_GO);
+		break;
 	case FSM_Exit(BS_GO):
 	{
+		std::cout << "Should I brake?\n";
 		if (traci->getDistance(
 				traci->junction("cluster_0__0_0__2_0__4_0__6").getPosition(),
-				mobility->getCurrentPosition(), false) <= 30)
+				mobility->getCurrentPosition(), false) <= 40)
 		{
 			//Warning! Car is turning.
+			std::cout << "Braking\n";
 			mobility->getVehicleCommandInterface()->setSpeed(0);
 			FSM_Goto(bikeFSM, BS_STOP);
 		}
@@ -163,6 +169,7 @@ void BikeManeuver::handleTurnWarning()
 	case FSM_Exit(BS_STOP):
 	{
 		// Car done turning
+		std::cout << "Going again\n";
 		mobility->getVehicleCommandInterface()->setSpeed(20 / 3.6);
 		FSM_Goto(bikeFSM, BS_GO);
 	}
@@ -171,11 +178,11 @@ void BikeManeuver::handleTurnWarning()
 
 void BikeManeuver::onData(WaveShortMessage *wsm)
 {
-	BaseWaveApplLayer::onData(wsm);
+	std::cout << "Got data!\n";
+	//BaseWaveApplLayer::onData(wsm);
 	if (myRole == BIKE && strcmp(wsm->getWsmData(), warning) == 0)
 	{
 		handleTurnWarning();
-		delete(wsm);
 	}
 	else if (strcmp(wsm->getWsmData(), warning) != 0)
 	{
@@ -185,5 +192,5 @@ void BikeManeuver::onData(WaveShortMessage *wsm)
 
 void BikeManeuver::onBeacon(WaveShortMessage* wsm)
 {
-	BaseWaveApplLayer::onBeacon(wsm);
+	//BaseWaveApplLayer::onBeacon(wsm);
 }

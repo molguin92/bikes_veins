@@ -1,0 +1,125 @@
+                                                                
+version 2
+run config-0-20160623-15:33:50-10016
+attr caccC1 0.5
+attr caccOmegaN 0.2
+attr caccXi 1
+attr configname config
+attr controller 0
+attr datetime 20160623-15:33:50
+attr experiment config
+attr headway 0.3
+attr inifile omnetpp.ini
+attr iterationvars "$controller=0, $sController=\"ACC\", $headway=0.3, $caccC1=0.5, $caccXi=1, $caccOmegaN=0.2, $ploegH=0.5, $ploegKp=0.2, $ploegKd=0.7, $priority=2, $packetSize=200"
+attr iterationvars2 "$controller=0, $sController=\"ACC\", $headway=0.3, $caccC1=0.5, $caccXi=1, $caccOmegaN=0.2, $ploegH=0.5, $ploegKp=0.2, $ploegKd=0.7, $priority=2, $packetSize=200, $repetition=0"
+attr measurement "$controller=0, $sController=\"ACC\", $headway=0.3, $caccC1=0.5, $caccXi=1, $caccOmegaN=0.2, $ploegH=0.5, $ploegKp=0.2, $ploegKd=0.7, $priority=2, $packetSize=200"
+attr network scenario
+attr packetSize 200
+attr ploegH 0.5
+attr ploegKd 0.7
+attr ploegKp 0.2
+attr priority 2
+attr processid 10016
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr sController "\"ACC\""
+attr seedset 0
+
+vector 9  scenario.node[0].mobility  posx  ETV
+vector 10  scenario.node[0].mobility  posy  ETV
+vector 23  scenario.node[1].mobility  posx  ETV
+vector 24  scenario.node[1].mobility  posy  ETV
+vector 11  scenario.node[0].mobility  speed  ETV
+vector 25  scenario.node[1].mobility  speed  ETV
+vector 12  scenario.node[0].mobility  acceleration  ETV
+vector 13  scenario.node[0].mobility  co2emission  ETV
+vector 26  scenario.node[1].mobility  acceleration  ETV
+vector 27  scenario.node[1].mobility  co2emission  ETV
+vector 0  scenario.node[0].prot  distance  ETV
+vector 1  scenario.node[0].prot  relativeSpeed  ETV
+vector 2  scenario.node[0].prot  nodeId  ETV
+vector 6  scenario.node[0].prot  acceleration  ETV
+vector 3  scenario.node[0].prot  speed  ETV
+vector 4  scenario.node[0].prot  posx  ETV
+vector 5  scenario.node[0].prot  posy  ETV
+vector 14  scenario.node[1].prot  distance  ETV
+vector 15  scenario.node[1].prot  relativeSpeed  ETV
+vector 16  scenario.node[1].prot  nodeId  ETV
+vector 20  scenario.node[1].prot  acceleration  ETV
+vector 17  scenario.node[1].prot  speed  ETV
+vector 18  scenario.node[1].prot  posx  ETV
+vector 19  scenario.node[1].prot  posy  ETV
+vector 37  scenario.node[2].mobility  posx  ETV
+vector 38  scenario.node[2].mobility  posy  ETV
+vector 39  scenario.node[2].mobility  speed  ETV
+vector 40  scenario.node[2].mobility  acceleration  ETV
+vector 41  scenario.node[2].mobility  co2emission  ETV
+vector 28  scenario.node[2].prot  distance  ETV
+vector 29  scenario.node[2].prot  relativeSpeed  ETV
+vector 30  scenario.node[2].prot  nodeId  ETV
+vector 34  scenario.node[2].prot  acceleration  ETV
+vector 31  scenario.node[2].prot  speed  ETV
+vector 32  scenario.node[2].prot  posx  ETV
+vector 33  scenario.node[2].prot  posy  ETV
+vector 51  scenario.node[3].mobility  posx  ETV
+vector 52  scenario.node[3].mobility  posy  ETV
+vector 53  scenario.node[3].mobility  speed  ETV
+vector 54  scenario.node[3].mobility  acceleration  ETV
+vector 55  scenario.node[3].mobility  co2emission  ETV
+vector 42  scenario.node[3].prot  distance  ETV
+vector 43  scenario.node[3].prot  relativeSpeed  ETV
+vector 44  scenario.node[3].prot  nodeId  ETV
+vector 48  scenario.node[3].prot  acceleration  ETV
+vector 45  scenario.node[3].prot  speed  ETV
+vector 46  scenario.node[3].prot  posx  ETV
+vector 47  scenario.node[3].prot  posy  ETV
+vector 65  scenario.node[4].mobility  posx  ETV
+vector 66  scenario.node[4].mobility  posy  ETV
+vector 67  scenario.node[4].mobility  speed  ETV
+vector 68  scenario.node[4].mobility  acceleration  ETV
+vector 69  scenario.node[4].mobility  co2emission  ETV
+vector 56  scenario.node[4].prot  distance  ETV
+vector 57  scenario.node[4].prot  relativeSpeed  ETV
+vector 58  scenario.node[4].prot  nodeId  ETV
+vector 62  scenario.node[4].prot  acceleration  ETV
+vector 59  scenario.node[4].prot  speed  ETV
+vector 60  scenario.node[4].prot  posx  ETV
+vector 61  scenario.node[4].prot  posy  ETV
+20	3980 8783 28 55414 0.2 30.1 300 -5.852516276096 1.4999998692023 125.02297986152 1410.4415903304
+19	12763 8681 28 55414 0.2 30.1 300 228.70557060933 424.45413995404 80683.350564653 22575728.627249
+18	21444 8678 28 55414 0.2 30.1 300 29.212573974474 237.50272393674 45061.976392004 8674690.9392855
+17	30122 8732 28 55414 0.2 30.1 300 0.04500585580957 20.112681274702 2101.9222180666 27412.012539749
+16	38854 5114 28 55414 0.2 30.1 300 100 100 30000 3000000
+15	43968 4514 28 55414 0.2 30.1 300 0 0 0 0
+14	48482 4814 28 55414 0.2 30.1 300 -1 -1 -300 300
+27	53296 84799 10 55545 0.03 30.14 3012 0.45104062668096 11.167644572003 15290.355523126 108345.16494992
+26	138095 91340 10 55545 0.03 30.14 3012 -5.8541700601095 1.4999998791634 1249.110270737 14124.175480644
+25	229435 90543 9 55545 0.02 30.14 3013 0.00029411764705882 22.553139857305 39145.493098718 611948.04983804
+24	319978 90423 2 55545 0.01 30.14 3014 228.670925243 424.83076901948 809927.00735264 226384459.31204
+23	410401 90398 2 55545 0.01 30.14 3014 29.209041940789 237.52946460038 450714.32752965 86674567.424227
+34	500799 8212 1336 56671 3.2 30.9 278 -5.8560084434975 2.4941065641364 87.723741831618 1684.3307261087
+33	509011 8116 1336 56671 3.2 30.9 278 228.68371492245 424.2769473145 75792.206201378 21589440.127184
+32	517127 8123 1336 56671 3.2 30.9 278 29.213357408106 237.49014325933 43723.491846973 8582919.8186599
+31	525250 8160 1336 56671 3.2 30.9 278 0.060404697462533 20.711103440331 2101.4794024482 29131.559727465
+30	533410 4814 1336 56671 3.2 30.9 278 101 101 28078 2835878
+29	538224 8494 1336 56671 3.2 30.9 278 -0.76929417275564 4.053085521372 34.475693962948 396.86739786041
+28	546718 8018 1336 56671 3.2 30.9 278 -1 13.222412233478 2308.2307368596 22246.176847208
+41	554736 78508 1237 56817 3.03 30.98 2796 0.20836242596717 11.183746987782 15153.983613765 112365.95829077
+40	633244 85662 1237 56817 3.03 30.98 2796 -5.856178385249 2.4941065641364 859.89697280644 16935.690554253
+39	718906 84742 1236 56817 3.02 30.98 2797 0 22.658878094615 39147.474351237 634077.95137328
+38	803648 84685 1232 56817 3.01 30.98 2798 228.67323298167 424.889353496 762714.78430828 217243542.79131
+37	888333 84648 1232 56817 3.01 30.98 2798 29.209041940789 237.53362409822 438280.0398611 85982720.665178
+6	972981 15359 27 80663 0.2 57.2 571 -6 2.145242746803 57.313582391609 902.66009993104
+5	988340 16173 27 80663 0.2 57.2 571 219.42902863743 243.67631664167 131792.69090265 30446261.129672
+4	1004513 16167 27 80663 0.2 57.2 571 77.749197492198 374.71491234144 131937.67742632 34320538.123326
+3	1020680 14955 27 80663 0.2 57.2 571 0 13.843937690292 2972.9107190803 22583.631639849
+2	1035635 8225 27 80663 0.2 57.2 571 0 0 0 0
+1	1043860 8225 27 80663 0.2 57.2 571 0 0 0 0
+0	1052085 8796 27 80663 0.2 57.2 571 -1 -1 -571 571
+13	1060881 139712 10 80721 0.03 57.25 5723 0.973 6.9362868335462 10363.593439743 26030.833988415
+12	1200593 119088 10 80721 0.03 57.25 5723 -6 1.5 554.05967165682 8530.6716178958
+11	1319681 157803 9 80721 0.02 57.25 5724 0 13.889990943209 29867.165032733 227687.28603515
+10	1477484 173965 2 80721 0.01 57.25 5725 219.41314493715 243.67857561821 1321594.2089425 305358911.87563
+9	1651449 168208 2 80721 0.01 57.25 5725 77.721508364994 374.93656556125 1320394.1765028 343228822.762

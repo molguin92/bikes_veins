@@ -1,4 +1,4 @@
-package org.car2x.veins.modules.application.bikes_veins;
+package org.car2x.veins.modules.application.bikes;
 
 import org.car2x.veins.modules.application.ieee80211p.BaseWaveApplLayer;
 

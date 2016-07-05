@@ -26,7 +26,7 @@ protected:
 
 	typedef enum _BIKE_STATES
 	{
-		BS_GO = FSM_Steady(1), BS_STOP = FSM_Steady(2)
+		BS_INIT = 0, BS_GO = FSM_Steady(1), BS_STOP = FSM_Steady(2)
 	} BIKE_STATES;
 
 	enum CAR_MSGS

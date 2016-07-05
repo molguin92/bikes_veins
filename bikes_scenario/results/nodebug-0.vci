@@ -1,0 +1,38 @@
+file 1185410 1467747774                                         
+version 2
+run nodebug-0-20160705-15:42:36-18126
+attr configname nodebug
+attr datetime 20160705-15:42:36
+attr experiment nodebug
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network scenario
+attr processid 18126
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 2  scenario.node[0].veinsmobility  posx  ETV
+vector 3  scenario.node[0].veinsmobility  posy  ETV
+vector 9  scenario.node[1].veinsmobility  posx  ETV
+vector 10  scenario.node[1].veinsmobility  posy  ETV
+vector 4  scenario.node[0].veinsmobility  speed  ETV
+vector 11  scenario.node[1].veinsmobility  speed  ETV
+vector 5  scenario.node[0].veinsmobility  acceleration  ETV
+vector 6  scenario.node[0].veinsmobility  co2emission  ETV
+vector 12  scenario.node[1].veinsmobility  acceleration  ETV
+vector 13  scenario.node[1].veinsmobility  co2emission  ETV
+13	922 91345 4 3793 0.03 34.3 3428 0.973 10.040532458297 11112.898467977 52334.796788075
+12	92267 102180 4 3793 0.03 34.3 3428 -5.2743601260222 2.5 1386.3929985649 8709.8422667643
+11	194447 100139 3 3793 0.02 34.3 3429 0.024925894422951 13.889993175364 39144.13966063 492980.45211754
+10	294586 100046 2 3793 0.01 34.3 3430 228.67201579765 424.80333138589 938060.13081961 267996818.87903
+9	394632 96628 2 3793 0.01 34.3 3430 29.209041940789 237.5275165284 571896.07538364 114444830.73739
+6	491260 126977 4 5832 0.03 54.68 5466 0.973 5.808330181771 10073.123489464 23786.733524077
+5	618237 107059 4 5832 0.03 54.68 5466 -3 1.2 554.35884843656 6349.3538481666
+4	725296 149476 3 5832 0.02 54.68 5467 0 13.609163468214 29868.482780951 210229.95177662
+3	874772 155320 2 5832 0.01 54.68 5468 219.41220305433 243.67857561821 1263264.0517818 292140139.08509
+2	1030092 155318 2 5832 0.01 54.68 5468 77.721508364994 374.94970930964 1247397.5139434 325561274.45889
