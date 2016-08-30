@@ -12,6 +12,14 @@ def estimated_accel(v, dv, real_gap, a=5.0, u=16.7,
             return 0
 
     x = math.pow((v / u), 4)
-    y = math.pow(desired_gap()/real_gap, 2)
+    y = math.pow(desired_gap() / real_gap, 2)
 
     return a * (1 - x - y)
+
+
+def nextposition(accel, cpos, cvel, timestep=1.0):
+    return (cvel * timestep) + (0.5 * accel * math.pow(timestep, 2)) + cpos
+
+
+def probable_turn(vel, pos):
+    pass
